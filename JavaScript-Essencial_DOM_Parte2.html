@@ -1,0 +1,71 @@
+<!--
+    BOM - BROWSER OBJECT MODEL
+
+    o objeto WINDOW fica acima de DOCUMENT na hierarquia da arvore de objetos do JavaScript
+
+    window. esta ação manipula as informações no momento em que a janela for carregada
+-->
+
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JavaScript Essencial BOM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <style>
+        .zebrada{background:silver;}
+    </style>
+</head>
+<body>
+        <input type="button" value="Voltar" onclick="window.history.back();"/>
+        <input type="button" value="Avançar" onclick="window.history.forward();"/><br/>
+    <table class="zebra">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Fone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Rafael</th>
+                <th>11-97103-4280</th>
+            </tr>
+            <tr>
+                <th>Ana</th>
+                <th>11-97103-4280</th>
+            </tr>
+            <tr>
+                <th>Felipe</th>
+                <th>11-97103-4280</th>
+            </tr>
+            <tr>
+                <th>Angelica</th>
+                <th>11-97103-4280</th>
+            </tr>
+            <tr>
+                <th>Ramos</th>
+                <th>11-97103-4280</th>
+            </tr>
+            <tr>
+                <th>Sartori</th>
+                <th>11-97103-4280</th>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        window.onload=function(){
+            var zebrar = document.querySelectorAll(".zebra tbody tr") //selecionando .zebra é a classe da tabela, tbody e tr significa que as alterações acontecerão apenas nas tags <tr> abaixo de <tbody>
+            for (var i=0; i<zebrar.length; i+=2){ //inicia a variavel i a partir do indice 0, enquanto o tamanho da variavel zebrar for maior que a variavel i, acrescenter + 2, ou seja, ira pular 1 linha
+                zebrar[i].className = "zebrada"; //a variavel zebrar acessa o indice [i] da classe .classname ="zebrada" esta que é o style com o atributo silver, localizada no em <head><style>
+            }    
+        }
+    
+    </script>
+    
+</body>
+</html>
+

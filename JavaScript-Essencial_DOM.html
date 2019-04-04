@@ -1,0 +1,65 @@
+<!--DOM - DOCUMENT OBJETC MODEL
+   O DOM é criado pelo navegador quando uma página web é carregada.
+    e É com ele que nós podemos criar, alterar, deletar e modificar elementos das página HTML
+    o DOm é uma forma de interpretar e organizar todos os elementos de uma página.
+    como se fosse uma arvore de objetos, pois toda a organização do DOM é como se fosse uma árvore.
+
+    documento. esta ação manipula as informações a partir do DOM 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Apresendo sobre DOM</title>
+    </head>
+    <body>
+        <p id="demo"></p>
+        <p class="exemplo"></p>
+        <p class="exemplo"></p>
+        <p class="exemplo"></p>
+        <!--<img id ="imagem" src="imagem.jpg" alt="Texto Alternativo">-->
+        <!--<p id  ="color">Alterando CSS</p>-->
+        <!--<h1 onclick="this.innerHTML ='Obrigado' ">Clique aqui</h1> this refere-se a tag h1 e o evento onClick irá modificar o texto ao clicar na palavra "clique aqui"-->
+        <!--<h1 onclick="funcao(this)">Clique Aqui</h1>-->
+        <h1 id="demo" onmouseover="funcao1(this)" onmouseout="funcao2(this)">Passe o mouse</h1>
+        <script>
+            //formas de buscar elementos no DOM e fazer a manipulação deles
+        /*
+            document.getElementById("demo").innerHTML = "Teste usando o método getElementById e a propriedade innerHTML"
+            console.log(document.getElementsByTagName("p")); retorna um array
+            var x = document.getElementsByClassName("exemplo"); //retorna um array
+            x[0].innerHTML = "Posição 0"; //utilizado a class name "exemplo", selecionado a posição 0 do array e manipulado a informação para aparecer o texto "posição 0" no paragráfo
+            x[1].innerHTML = "POsição 1";
+            x[2].innerHTML = "Posição 2";
+
+            var x = document.querySelectorAll("p.exemplo"); //faz uma filtro utilizando o parametro "p.exemplo" onde ele irá buscar apenas as tags p com a classe "exemplo".
+            console.log(x); retorna via console o conteudo da variável "x" que no caso é um array com 3 posições, referente a tag <p>
+        */
+        
+        //document.getElementById("imagem").alt="outro texto alternativo"; // altera valor de atributos como alt ou src
+        //document.getElementById("color").style.color = "brown"; // altera o propiedades do CSS via javascript
+                //javascript style reference - buscar documentação na internet
+/*
+        function funcao(elemento){
+            elemento.innerHTML = "Obrigado";
+        }
+*/
+/*
+        function funcao1(elemento){
+            elemento.innerHTML = "Mouse sobre o elemento";
+        }
+        function funcao2(elemento){
+            elemento.innerHTML = "Passe o mouse novamente";
+        }
+*/
+
+/*
+
+Eventos - onclick / onload / onchange / onmouseover / onmouseout / onfocus / onmousedown / onmouseup
+buscar por eventos para mais detalhes
+
+        </script>
+    </body>
+    
+</html>

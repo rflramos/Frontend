@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Formulário HTML</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <p><strong>Controle Input</strong></p>
+        <form name="cadastro" action="processa.php" method="POST" accept-charset="UTF-8">
+            
+            <label for="idnome">Nome:</label><br>
+            <input type="text" name="nome" id="idnome" size="30" placeholder="Informe seu nome"/><br/>
+            <label for="idsobrenome">Sobrenome:</label><br>
+            <input type="text" name="sobrenome" id="idsobrenome"/><br/>
+            <label for="idendereco">Endereço:</label><br> 
+            <input type="text" name="endereco" id="idendereco" size="60"/><br/>
+            <label for="idestado">Estado:</label><br>
+            <select name="estados" id="idestado">
+                <option value="SP">SP</option>
+                <option value="RJ" selected>RJ</option>
+                <option value="MG">MG</option>
+            </select>
+            <br>
+            <br>
+                       
+            <label for="idsexo"><strong>Sexo:</strong></label><br>
+            <input type="radio" name="sexo" id="idsexo" value="M" checked >Masculino<br>
+            <input type="radio" name="sexo" id="idsexo" value="F">Feminino<br>
+            <input type="radio" name="sexo" id="idsexo" value="N">Não declarado<br>
+            <br>
+            <label for="idestadocivil"><strong>Civil</strong></label><br>
+            <input type="radio" name="estadocivil" id="idestadocivil" value="solteiro" checked>Solteiro<br>
+            <input type="radio" name="estadocivil" id="idestadocivil" value="casado">Casado<br>
+            <input type="radio" name="estadocivil" id="idestadocivil" value="divorciado">Divorciado<br>
+            <input type="radio" name="estadocivil" id="idestadocivil" value="viuvo">Viúvo<br>
+            <br>
+            <div>
+                <fieldset>
+                    <legend>Marque os cursos desejados</legend>
+
+                    <input type="checkbox" name="linguagem" id="idc#" value="C#" checked>
+                    <label for="idc#">C#</label><br>
+                    <input type="checkbox" name="linguagem" id="idjs" value="JavaScript">
+                    <label for="idjs">JavaScript</label><br>
+                    <input type="checkbox" name="linguagem" id="idjava" value="Java">
+                    <label for="idjava">Java</label><br>
+                </fieldset>
+            </div>
+            <br>
+            <fieldset>
+                <legend><strong>Controle de data e hora</strong></legend>
+            
+                <label for="idDataNasc">Data de Nascimento</label>
+                <input type="date" name="dataNasci" id="idDataNasc"><br>
+                <label for="idHora">Hora de cadastro</label>
+                <input type="time" name="hora" id="idHora"><br>
+                <label for="idSemana">Semana do Ano</label>
+                <input type="week" name="semana" id="idSemana"><br>
+                <label for="idMes">Mes do ano</label>
+                <input type="month" name="mes" id="idMes"><br><br>
+            </fieldset><br>    
+
+            <fieldset>
+                <legend><strong>Controle Textarea</strong></legend>
+                <label for="idComent">Área para comentários (max. 300 caracteres)</label><br>
+                <textarea name="comentario" id="idComent" cols="30" rows="10" maxlength="300" minlength="20"></textarea>
+            </fieldset><br>
+
+            <fieldset>
+                <legend><strong>Controle para botões</strong></legend>
+
+                <input type="submit" name="send" value="Send"><br><br>
+                <input type="reset" name="reset" value="Reset"><br><br>
+                <button type="button" onclick="alert('Bom Dia')">Bom dia</button>
+            </fieldset><br>
+
+            <fieldset>
+                <legend><strong>Controle datalist</strong></legend>
+                <label for="idCurso"> Informe o curso desejado</label><br>
+                <input type="text" name="curso" id="idCurso" list="cursos">
+
+                <datalist id="cursos">
+                    <option value="C#">
+                    <option value="JavaScript">
+                    <option value="Java">    
+                </datalist>
+
+
+
+            </fieldset>
+
+
+            <br>
+            <label for="idsenha">Senha:</label><br>
+            <input type="password" id="idsenha" name="senha" maxlength="4" required /><br/>
+            <br>
+            <input type="submit" value="Enviar" /><br/>
+
+        </form>
+    </body>
+</html>

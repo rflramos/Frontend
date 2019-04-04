@@ -1,0 +1,125 @@
+<!--
+    Objeto Date
+
+    É um objeto embutino do JS que permite trabalhar
+    com datas e horas.
+    com ele podemos armazenar datas e realizar operações sobre elas, por meio dos metodos do objeto
+
+    Podemos criar um objeto Data de quantro formas:
+
+    1 - objeto contendo data e hora atual.
+    var data = new Date();
+
+    2 - Passando o valor da data em milissegundos decorridos a partir de 1/1/1970, 00:00:00 (numero inteiro)
+    var data = new Data(milissegundos);
+
+    3 - Passando data com dia mês anos (mês é contao a partir do zero, pois esta armazenado em um array )
+    var data = new Date(ano,mês, dia);
+     apenas o ano é obrigatório informar
+
+     4 - Passando a data em uma string de formato especifico;
+
+     varnome = new Data(String de data);
+
+     Método GET do objeto Date()
+
+     getDate()              - retorna o dia do mes
+     getDay()               - retorna o dia da semana entre 0 e 6 (0 é Domingo)
+     getFullYear()          - ano com 4 digitos
+     getHours()             - hora entre 0 e 23
+     getMilliseconds()      - milissegundos entre 0 e 999
+     getMinutes()           - minuto da hora entre 0 e 59
+     getMonth()             - mes entre 0 e 11 (0 é Janeiro)
+     getSeconds()           - segundos entre 0 e  59
+     getTime()              - milissegundos decorridos desde 01/01/1970
+
+
+     Método SET do objeto Date()
+     
+     setDate()          - configura o dia do mês entre 1 e 31
+     setFullYear()      - configura o ano, com 4 dígitos
+     setHours()         - configura a hora entre 0 e 23
+     setMilliseconds()  - configura os milissegundos entre 0 e 999
+     setMinutes()       - configura os minutos da hora entre 0 e 59
+     setMonth()         - configura o mês entre 0 e 11 (0 é janeiro)
+     setSeconds()       - configura os segundos entre 0 e 59
+     setTime()          - configurad o milissegundos decorridos desde 01/01/1970 (conhecido como época Unix)
+-->
+
+<html>
+    <head>
+        <title> Objeto Date JavaScript</title>
+    </head>
+    <body>
+    <!--
+        <script>
+        var hoje = new Date();
+        var milissegundos = new Date(1762312538973126362547);
+        var dataString = new Date("2019/03/19");
+        //invovanco o objeto Date como uma função (sem operador new)
+
+        document.write("Data: ", Date(), "<br/>");
+        document.write("Data em milissegundos: ", Date.now(), "<br/>" );
+
+        </script>
+    -->
+
+    <!--Método Set do objeto Date()-->
+    <script type="text/JavaScript">
+        //Array com os nomes dos meses do ano
+        var mes = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"];
+        var semana = ["Domingo","Segunda-Feira","Terça-Feira","Quarta-Feira","Quinta-Feira","Sexta-Feira","Sábado"];
+
+        var hoje = new Date(); //Data e hora atuais
+
+        //Exibindo os valores iniciais de data e hora no navegador
+        document.write("Exibindo os valores iniciais de data e hora no navegador: <br/>");
+        document.write("Dia do mês: ", hoje.getDate(),"<br/>");
+        document.write("Mês: ", mes[hoje.getMonth()], "<br/>");
+        document.write("Ano: ", hoje.getFullYear(), "<br/>");
+        document.write("Dia da semana: ", semana[hoje.getDay()], "<br/>");
+        document.write("Hora: ", hoje.getHours(), "<br/>");
+        document.write("Minutos: ", hoje.getMinutes(), "<br/>");
+        document.write("Segundos: ", hoje.getSeconds(), "<br/>");
+
+        //Função que permite alterar data e hora
+        function alterarData() {
+            hoje.setDate(document.getElementById("dia").value);
+            hoje.setMonth(document.getElementById("mes").value -1);
+            hoje.setFullYear(document.getElementById("ano").value);
+            alert("Data: " + semana[hoje.getDay()] + ", " + hoje.getDate() + " de " + mes[hoje.getMonth()] + " de " + hoje.getFullYear());
+            
+        }
+
+    </script>
+
+    <form name="Datas">
+        <p>Preencha os campos a seguir para alterar a data</p>
+        <div>
+        <label>Dia:</label>
+        <input type="text" name="dia" id="dia" size=4 placeholder="Dia"/>
+        <label>Mês:</label>
+        <select name="mes" id="mes">
+            <option value="1">Janeiro</option>
+            <option value="2">Fevereiro</option>
+            <option value="3">Março</option>
+            <option value="4">Abril</option>
+            <option value="5">Maio</option>
+            <option value="6">Junho</option>
+            <option value="7">Julho</option>
+            <option value="8">Agosto</option>
+            <option value="9">Setembro</option>
+            <option value="10">Outubro</option>
+            <option value="11">Novembro</option>
+            <option value="12">Dezembro</option>
+            
+        </select>
+        <label>Ano:</label>
+        <input type="text" name="ano" id="ano" size=4 placeholder="Ano"/><br/>
+        <button name="alteraData" type="button" onclick="alterarData();">Alterar Data</button><br/>
+        </div>
+        <br/>
+        
+    </form>
+    </body>
+</html>

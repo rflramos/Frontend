@@ -1,0 +1,183 @@
+<!--
+    Arrays
+
+    Usamos arrays em JS para armazenar multiplos valores em uma unica varivel
+    Os valores armazenados em um array pode ser de diversos valores no JS
+    Utilizando array poupamos esforços em escrever diversas variaveis para cada item
+
+    Cada item dentro de um array é chamado de elemento cada elemento ocupa uma posição ou indice
+    JS não aceita array associativo 
+
+    array literal
+    var nome_array =[]; //arry vazio
+    var nome_arry = [item1,item2..]; //array inicializado
+
+    array intanciado
+    var nome_arry = new(item1, item2...);
+    document.write(array.isArray(nom_array))
+-->
+
+<html>
+    <head>
+        <title>Array</title>
+    </head>
+    <body>
+        
+    <!--
+        <script>
+            var estados = ["SP","RJ","MG"];
+            for(i = 0; i < 3; i++){
+                document.write(estados[i] + "<br/>")
+            }
+
+        </script>
+    -->
+
+    <!--
+        <script>
+                var estados = ["SP"."RJ"."MG"];
+                var estado = estados[1];
+                    document.write("O Estaco é " + estado);
+        </script>
+    -->
+
+    <!--
+        <script>
+            var estados =["SP","RJ","MG"];
+            for(i = 0; i < 3; i++){
+                document.write(estados[i] + "<br/>");
+            }
+            
+            estados[0] = "BA";
+            for(i = 0; i < 3; i++){
+            document.write(estados[i] + "<br/>");
+            }
+        
+        </script>
+    -->
+
+    <!--
+        <script>
+            var estados =["SP","RJ","MG"];
+            var qntEstados = estados.length; //metodo .lenght
+            document.write("O Array \"estados\" tem " + qntEstados + " elementos");
+        
+        </script>
+    -->
+
+    <!--
+        <script>
+            var estados =["SP","RJ","MG"];
+            estados.push("RO");//metodo .push para adicionar mais elementos ao array
+            estados.push("GO");
+            for(i = 0; i < estados.length; i++){
+                document.write(estados[i] + "<br/>");
+            }
+        
+        </script>
+    -->
+
+    <!--
+        <script>
+            var estados =["SP","RJ","MG"];
+            document.write(estados[estados.length -1] + "<br/>");
+            document.write("Número de elementos atual: " + estados.length + "<br/>")
+            estados.pop();// ###################----Método .pop remove o último elemento do array 
+            document.write(estados[estados.length -1] + "<br/>");
+            document.write("Número de elementos atual: " + estados.length  + "<br/>");
+        </script>
+    -->
+
+    <!--
+        <script>
+            var estados =["SP","RJ","MG"];
+            var conjuntoEstados = estados.join(", ");//Método .join une todos os elementos do array em uma única variavel.
+            document.write(conjuntoEstados);
+        
+        </script>
+    -->
+
+    <!--
+        <script>
+            var estados =["SP","RJ","MG"];
+            document.write("Antes de deslocar um elemento do array :" + "<br/>");
+            document.write("Tamanho " + estados.length + "<br/>");
+            document.write("1º elemento : " + estados + "<br/>");
+            estados.shift();//Método shift() elimina o primeiro elemento do array
+            document.write("Depois de deslocar um elemento do array:" + "<br/>");
+            document.write("Tamanho " + estados.length + "<br/>");
+            document.write("1º elemento : " + estados + "<br/>");
+
+        </script>
+    -->
+
+    <!--
+        <script>
+            var estados =["SP","RJ","MG"];
+            for(i = 0; i < estados.length; i ++){
+                document.write(estados[i] + "<br/>");
+            }
+
+            delete estados[1];//operador delete do JS (Não é um método de arrays) elimina o elemento do array mas mantem a posição
+            document.write("<br/>Após deletar o elemento:<br/><br/>");
+            for(i = 0; i < estados.length; i++){
+                document.write(estados[i] + "<br/>");
+
+            }
+                    
+        </script>
+    -->
+
+    <!--
+        <script>
+            var estados =["SP","RJ","MG"];
+            for (i = 0; i < estados.length; i++){
+                document.write(estados[i] + "<br/>");
+            }
+
+            estados.splice(3,0,"RO","GO");//Método splice() adiciona elementos a partir de uma posição do arrya
+                                          //.splice(1 - a partir de qual posição
+                                          //.splice(1,0 - 0 indica quantos elementos serão removidos 0 significa nenhum
+                                          //.splice(1,0,"RO","GO" - são os valores a serem inseridos
+                                          //.splice(1,2) apartir da posição 1 remova 2 elementos sem deixar undefined
+            document.write("<br/>Após adicionar elementos:<br/><br/>");
+
+            for(i = 0; i < estados.length; i++){
+                document.write(estados[i] + "<br/>");
+            }
+               
+        </script>
+    -->
+
+    <!--
+        <script>
+            var sudeste =["SP","RJ","MG"];
+            var nordeste =["PI","CE","PE"];
+            var sul =["PR","SC","RS"];
+            var estados = sudeste.concat(nordeste,sul);//Método concat() concatena os arrays em um novo array
+            document.write("<br/>Listando Estados com o método concat()<br/><br/>");
+
+            estados.sort(); //ordena em ordem alfabetica como étodo sort()
+            for(i = 0; i < estados.length; i++){
+                document.write(estados[i] + "<br/>");
+            }
+
+        </script>
+    -->
+
+        <script>
+            var valores = [12,34,6,45,10,9,44,38,23,98];
+
+            function ordenaNum(a,b){ //função para comparação dos valores, sera ordenado pelo metodo sort() que ordena de forma crescente ou reverse() que ordena de forma reversa
+                return a > b ? 1 : a < b ? -1 : 0;
+            }
+            valores.reverse(ordenaNum); //método reverse() ordena de forma reversa 
+            for(i=0;i<valores.length;i++){
+                document.write(valores[i]+" ");
+            }
+
+
+        </script>
+
+    </body>
+</html>

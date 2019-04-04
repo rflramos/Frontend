@@ -1,0 +1,54 @@
+<!--
+Objeto Matc
+
+O objeto Math fornece propiedades e metodos matemáticos.
+Todas as suas propriedades e métodos são estáticos, significa que não criamos uma nova 
+instância de Math paar utilizar sua funcionalidade.
+Acessamos essas propiedades e métodos no próprio objeto
+
+lita de propiedades do objeto
+LN10 - Logaritimo natual de 10;
+LN2 - Logaritimo natural de 2;
+LOG10E - Logaritimo de base 10 de E;
+SQRT2 - Raiz quadrada de 2;
+SQRT1_2 - Raiz quadrada de 1/2 (meio);
+
+Todos os arqgumentos passados para os métodos do objeto Math são convertidos para
+ números automaticamente
+Não é necessário conversões.
+
+Diversos métodos estão disponíveis no objeto Math, incluindo funções trigonometricas, 
+geração de números aleatórios e exponenciação.
+
+Métodos do objeto Match
+
+abs(x) - Retorna o valor absoluto de x
+sin(x) - seno de um angulo especifico x, em radianos
+cos(x) - cosseno de um angulo x, em radianos
+ceil(x) - arredonda x para o próximo inteiro(acima)
+floor(x) - arredonda x para o inteiro abaixo
+round(x) - arredonda x para o inteiro mais próximo
+pow(x,y) - retorna x elevado a y
+min(x1,x2,x3...) - compara os números e retorna o menor
+max(x1,x2,x3...) - compara os números e retorna o maior
+random() - gera um número 0 e 1 aleatoriamente.
+
+-->
+
+<html>
+    <hed>
+        <body>
+            <script type="text/javascript">
+                var a = 2.56;
+                var x = 4;
+                var y = 3;
+
+                document.write("Arredonda para cima: " + Math.ceil(a) + "<br/>");
+                document.write("x elevado a y: " + Math.pow(x,y) + "<br/>");
+                document.write("Gera valor aleatório: " + Math.random() * 10);
+            
+            
+            </script>
+        </body>
+    </hed>
+</html>

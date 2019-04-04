@@ -1,0 +1,35 @@
+<!--Em muitos casos pe necessário repetir um trecho de
+um programa diversas vezes. Nesse caso podemos usar um LOOP
+que efetua essa repetição de código quantas vezes forem necessárias
+
+Os Loops são chamados também de laços de repetição-->
+
+<!--ESTRUTURA DE REPETIÇÃO WHILE
+Realiza um teste lógico no inicio do loop e cada vez que o teste 
+retorno um valor verdadeiro, os comandos associados ao laço são
+executados novamente
+quando o teste retorna falso o laço é encerrado e o processamento volta para o fluxo
+principal do programa-->
+
+<html>
+    <head>
+        <title>Estrutura de Repetição While</title>
+    </head>
+    <body>
+        <script>
+            var numero, contador = 0; //Isto são duas variáveis
+            numero = prompt("Digita um número qualquer entre 10 e 100");
+
+            if((numero < 10) || (numero > 100)){
+                alert("Valor fora do intervalo especificado!");
+            }
+            else{
+                while(contador <= numero){ //expressão 
+                    document.write(contador + "<br/>");
+                    contador++
+                }
+            }
+        </script>
+    </body>
+</html>
+

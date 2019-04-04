@@ -1,0 +1,119 @@
+<!--JavaScript Windows Objet reference
+para encontrar referencias 
+
+armazenamento de informaçoes no proprio browser
+localstorage - armazenamento sem data de expiração
+sessionstorage - armaneza enquaro o navegador esta aberto
+setitem - armazenar alglo no computador do usuário
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    
+</head>
+<body>
+<!--
+    <input type="button" value="Avançar" onclick="window.history.forward();"/> manipula o browse e possibilita que o usuário avance ou retorna a pagina que estava navegando
+    <input type="button" value="Voltar" onclick="window.history.back();"/>
+-->
+<!--
+    window - manipula o browse
+    localStorage.setItem - armazena algo no computador que esta acessando o browse, o parametro é (chave, valor)
+     
+
+    <div id ="msg">
+
+    </div>
+
+    <script>
+        window.localStorage.setItem('nome', 'Rafael');
+        window.sessionStorage.setItem("nome2", "Felipe"); // armazena somente enquanto a página estiver aberta, diferente do localStorage que armazena de forma permanente e somente será removido caso o cookie for limpo
+        document.getElementById('msg').innerHTML = window.localStorage.getItem('nome');// getItem irá obter o valor da chave "nome" armazenado anteriormente em setItem(chave, valor) e retornar o valor para a tag utilizado o id = "msg"
+        
+    </script>
+-->
+<!--    
+    <script>
+        var janela = window.open(" ", " ", "width=500, height=500");
+        janela.document.write("Janela filha");
+        janela.opener.document.write("Janela princicipal");
+    </script>
+-->
+
+<!--
+
+    funções para manipular o navegador
+    setTimeout(função, milessegundos) - Função que será executada uma unica vez depois de um determinado tempo
+    o primeiro parametro obrigatoriamente tem que ser uma função, o segundo parametro é quantos milessegundos o browse aguarda
+    para executar a ação
+
+    para parar a execução do setTimeout, utiliza-se o clearTimeout() e deve-se inserir um parametro que deve se referenciado ao setInterval
+    por exemplo:
+    
+    o script abaixo criado uma variavel "msg" onde  armazena a função setTimeout, o parametro é o nome que sera utlizado como função
+    e é informado qual em quanto tempo ocorreá o timeout, no caso 1000 = 10s.
+    é criado a function com o mesmo nome do parametro do setTimeout(função).
+    ao executar esta função um contado sera iniciado e ao chegar aos 10s é gerado a mensagem.
+    para cancelar é utilizado o clearTimeout() dentro do parametro deve ser informado uma referencia para o setTimeout, usa-se uma variavel.
+
+    <input type="button" value="cancelar" onclick="clearTimeout(msg)"/>
+    <script>
+        var msg = setInterval(msgInterval, 1000);
+        function msgInterval(){
+            console.log("Msg via interval")
+        }
+    </script>
+    
+    setInterval(função, milessegundos) - O SetInterval chama a função a cada x tempo determinado no parametro da função
+    caso não utilize o clearInterval() a função ficará executando eternamente, pois não tem timeout.
+
+    Exemplo de caso de uso:
+
+    O usuário esta navegando a 1min em sua pagina, após este tempo, uma mensagem pode ser exibida na tela
+
+
+-->
+
+<!--
+    O script abaixo inicia com a variavel intervalo e este recebe o setIntervalo com os parametros verificaFoco e 1000.
+    o setInterval sera executado a cada 10s
+    outra variavel contador é criado e iniciado com 0.
+    a função verificaFoco tem uma estrutura conficional IF onde, caso o documento DOM tenha fodo "document.hasfoco"
+    a variavel contador recebe +1 a cada 10s e o console.log apresenta o valor atual do contador
+    quando o contador chegar a >=10 será chamado a função msgTimeout que envia uma mensagem a <div id="msg">
+    e o clearInteval(intervalor) sera executado para encerrar o setInterval.
+    a funtion msgTimeout utiliza do DOM "document.", caputa o id getElementById("msg") e apresenta no documento ".innerHTML" a mensagem 
+    
+-->
+<div id="msg">
+
+</div>
+
+<script>
+var intervalo = setInterval(verificaFoco, 1000);
+var contador = 0;
+function verificaFoco(){
+    if(document.hasFocus()){
+        contador++;
+        console.log(contador);
+        if(contador >= 10){
+            msgTimeout();
+            clearInterval(intervalo);
+        }
+    }
+}
+function msgTimeout(){
+    document.getElementById("msg").innerHTML = "Obrigado por permanecer na página";
+}
+
+</script>
+
+
+</body>
+</html>

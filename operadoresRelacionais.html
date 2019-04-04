@@ -1,0 +1,34 @@
+<!--OPeradores Relacionais retorna true ou False-->
+
+<html>
+    <header>
+        <title>Operadores Relacionais</title>
+    </header>
+    <body>
+        <script>
+        var logico = true;
+        var num = 10;
+        var texto = "10";
+
+        document.write(logico + "<br/>");
+        
+        logico = num == texto; //esta validando se os valores das variaveris num e texto são iguais
+        document.write("10 == \"10\" " + logico + "<br/>");
+
+        logico = num === texto; //esta verificando se os tipos de dados entre as variaves num e texto são iguais
+        document.write("10 === \"10\" " + logico + "<br/>");
+
+        logico = num != texto; //esta verificando se o valor das variavies são diferentes
+        document.write("10 != \"10\" " + logico + "<br/>");
+
+        logico = num !== texto; //esta verificando se os tipos de dados são diferentes
+        document.write("10 !== \"10\" " + logico + "<br/>" );
+
+        logico = num > texto; //verifica se o valor de num é maior que o valor de texto, não leva em consideração oo tipo de dado
+        document.write("10 > \"10\" " + logico + "<br/>");
+        
+        logico = num >= texto; //verifica se o valor de num é maior ou igual ao valor de texto, não leva em consideração o tipo de dado
+        document.write("10 >= \"10\" " + logico + "<br/>");    
+        </script>
+    </body>
+</html>

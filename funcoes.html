@@ -1,0 +1,140 @@
+<!--FUNÇÕES são conjuntos de instruções que podem ser axecutadas com um único comando.
+vantagens: reuso de código, evitando muitas linhas de programação, simplifica o código.
+Podem receber parametros e retornar valores, ou simplesmente executar uma tarefa
+sintaxye:
+function nome_função(parêmetro1..2){
+     códigos da função
+}  
+
+Parametros e funções.
+
+uma função pode se comunicar com o programa onde é executada por meio do uso de ARGUMENTOS
+passados a função, assim com pelo valor retornado pela função.
+Argumentos são passados a uma função usando-se PARÂMETROS, que são nomes declarados no cabeçalho da função.
+exemplo de cabeçalho com dois paraâmetros declarados: num1 e num2:
+
+function soma(num1, num2)
+
+Passagegem por valor e referência
+
+Parâmetros de tipos primitivos como strings, numericos ou booleanos
+são passados POR VALOR. Isso significa que se o ARGUMENTO for alterado dentro da função,
+essa alteração NÃO se reflete na variável do programa original(fora da função)
+
+Já objetos são passados POR REFERÊNCIA. Isso significa que se uma alteração for realizada no objeto
+dentro da função, a alteração irá se propagar para o bjeto fora da função.
+
+Tipo primitivos, passagem por valor - exemplo string, numerico e booleano
+tipos objetos, passagem por referência. - array é um obejto no JavaScript - array é um vetor
+-->
+
+<html>
+    <haed>
+        <title>Funções JavaScript</title>
+    </haed>
+
+    <body>
+        <!--
+            <script>
+              function Mensagem(nome){
+                  alert("Parabéns " + nome);
+              }  
+              //chamando função
+              var a = prompt("Digite seu nome")
+              Mensagem(a);//pasasgem de parâmetro para a função
+            </script>
+        -->
+
+            <!--Uma função também pode retornar um valor ao script que a chamou.
+            Usamos a palavra-chave return para tal.-->
+
+        <!--
+            <script>
+                var V = prompt("Entre com o valor da tensão");
+                var R = prompt("Enter com o valor da resitência");
+
+                function calcula(V,R){
+                    var I = V/R;
+                    return I;
+                }
+                var corrente = calcula(V/R);
+                document.write("O valor da corrente é ", corrente, "A");
+            </script>
+        -->
+    <!--
+        <script type="text/JavaScript">
+            function valorReferencia(strVar, arrVar){
+                strVar = "String Modificada";
+                arrVar[0] = "Array Modificado";
+            }
+            var texto = "Valor Original";
+            var vetor = ["Valor Original"];
+            document.write("String antes de chamar a função: " + texto + "<br/>");
+            document.write("Array após chamar a função: " + vetor[0] + "<br/>");
+                //chamado a função
+            valorReferencia(texto, vetor);
+            document.write("String após chamar a função: " + texto + "<br/>");
+                //passagem por valor, pois esta utilizando tipo primitivo. O Valor da variavel "texto"
+                //permanece cimi "valor original"
+                //pois passagem por valor não se propaga para o restante do programa
+            document.write("Array após chamar a função: " + vetor[0] + "<br/>");
+                //passagem por referência, pois esta utilizando o objeto array.
+                //o valor da variavel "vetor" sera alterado para "String Modificada"
+                //pois passagem por referência altera o valor no restante do programa que chamou a função.
+        
+        </script>
+    -->    
+
+    <!-- Passando múltiplos parâmetros à função - 
+        <script type="text/javascript">
+
+            function Mensagem(nome, sobrenome){
+                alert("Bem-vindo, " + nome + " " + sobrenome);
+            }
+                //chamando a função:
+            var a = prompt("Digite seu nome:");
+            var b = prompt("Digite o sobrenome:");
+            Mensagem(a, b);
+        </script>
+    -->
+
+    <!--    
+        Retornando valor em uma função
+        Uma função pode ou não retornar um valor ao progama chamador.
+        Caso seja retornar um valor, usamos a instrução RETURN em um ponto apropriado do programa
+        
+        Quando a instrução return é encontrada, o processamento do código da função para neste ponto,
+        e retorna o valor (e o controle) para o chamador do código.
+        
+        É possível ter mais de uma instrução em uma função
+
+     
+        <script type="text/javascript">
+            function quadrado(numero){
+                quad = numero * numero;
+                return quad;
+            }
+            var num = prompt("Entre com um número: ");
+            document.write("O quadrado de " + num + " é " + quadrado(num));
+        </script>
+    -->
+
+    <!-- Usando mais de uma declaração return-->
+    <script type="text/javascript">
+        function quadrado(numero){
+            if(isNaN(numero)){ //if is not a number isNaN
+                return "Valor digitado não é um número válido";
+            }
+            quad = numero * numero;
+            return quad;
+        }
+        var num = prompt("Entre com um número: ");
+        document.write(quadrado(num));
+
+    </script>   
+    
+
+
+     </body>
+    
+</html>

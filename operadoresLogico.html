@@ -1,0 +1,96 @@
+ <!--Utilizados em estruturas de controle, tanto condicionais quanto estruturas de repetição-->
+ <!--Usados para tomar decisões baseadas em valores booleanos true e false-->
+ <!--operadores 
+    && = AND
+    || = OR
+    !  = NOT 
+
+    É possível utilziar o operador && oara eue seja retornado o valor de um dos operadores em vez de 
+    um valor booleano
+
+    variavel = operando01 && operando02
+    se o operando01 for falso a variavel recebera o valor do operando01, no caso "false" caso seja verdadeiro
+    a variavel recebera o valor do operando02
+ -->
+
+ <html>
+     <header>
+         <title>Operadores Lógicos</title>
+     </header>
+     <body>
+         <script>
+             //OPERADOR AND &&
+             //RETORNA VALOR BOOLEANO TRUE OU FALSE
+             /*var logico;
+             var num1 = 25;
+             var num2 = 30;
+
+             logico = (num1 != num2) && (num1 < num2);
+             document.write(logico + "<br/>");
+
+             document.write("Alterando num1"+ "<br/>");
+
+             num1 = 30;
+
+             logico = (num1 != num2) && (num1 < num2); //OPeradores relacionais "(num1 != num2)" retornam valores lógicos 
+             document.write(logico + "<br/>");*/
+
+
+             //RETORNANDO VALOR DO OPERANDO COM OPERADOR LOGICO AND &&
+             //RETORNA O VALOR DO OPERANDO 1 CASO FALSE OU O VALOR DO OPERANDO 2 CASO TRUE
+             //PODE RETORNAR NUMERO, BOOLEANO OU STRING
+             /*var logico;
+             var x = 12;
+             var num1 = 25;
+             var num2 = 30;
+
+             logico = (num1!= num2) && (x);
+             document.write(logico + "<br/>");
+
+             logico =(num1 == num2) && (x);
+             document.write(logico + "<br/>");*/
+
+             //OPERADOR OR ||
+             // RETORNA VALOR BOOLEANO TRUE OU FALSE
+
+             /*var logico;
+             var num1 = 25;
+             var num2 = 30;
+             
+             logico = (num1 != num2) || (num1 > num2);
+             document.write(logico + "<br/>");
+             
+             document.write("Alterando num1: ")
+             num1 = 30;
+
+             logico = (num1 != num2) || (num1 > num2);
+             document.write(logico + "<br/>")*/
+
+             //RETORNA O VALOR DO OPERANDO USANDO O OPERADOR LOGICO OR ||
+             // RETORNA O VALOR DO OPERANDO 1 CASO SEJA TRUE OU O VALOR DO OPERANDO 2 CASO FALSE
+            /*var x = 12;
+            var logico;
+            var num1 = 25;
+            var num2 = 30;
+
+            logico = (num1 != num2) || (x);
+            document.write(logico + "<br/>");
+
+            logico = (num1 == num2) || (x);
+            document.write(logico + "<br/>");*/
+
+            //OPERADOR LOGICO NOT !
+            //INVERTE O VALOR BOOLEANO, SE FOR TRUE, ELE TRANSFORMA EM FALSE E VIVE-VERSA
+            var logico;
+            var num1 = 20;
+            var num2 = 30;
+
+            logico = !(num1 > num2);
+            document.write(logico + "<br/>");
+
+            logico = !(num1 < num2);
+            document.write(logico + "<br/>");
+        
+        </script>
+     </body>
+ </html>

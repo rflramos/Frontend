@@ -1,0 +1,38 @@
+<!--
+ Uma variavel pode ter um escopo Global ou Local.
+ Escopo é o lcoal dentro do código onde a variavel pode ser reconhecida e utilizada
+-->
+
+<html>
+    <head>
+        <title>Escopo de variáveis JavaScript</title>
+    </head>
+    <body>
+ 
+    <!--
+    Variavel global
+    
+        <script type="text/javascript">
+            var comida = "pizza";
+            function pedirComida(){
+                document.write(comida + " Dentro da função " + "<br/>");
+            }
+            pedirComida();
+            document.write("Eu quero comer " + comida + " Fora da função ");
+        </script>
+    -->
+    <!--
+        Variavel local
+    -->
+    <script typo="text/javascript">
+        function pedirComida(){
+            var comida = "Pizza";
+            document.write("Dentro da funçã " + comida);
+        }
+        pedirComida();
+        document.write("Eu quero uma " + comida);
+    </script>
+
+    </body>
+</html>
+
